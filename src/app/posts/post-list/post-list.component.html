@@ -1,0 +1,17 @@
+<div class="post-list">
+  <mat-accordion *ngIf="posts.length > 0; else noPosts">
+    <mat-expansion-panel *ngFor="let post of posts">
+      <mat-expansion-panel-header>
+        <mat-panel-title>{{ post.title }}</mat-panel-title>
+      </mat-expansion-panel-header>
+      <p>{{ post.content }}</p>
+    </mat-expansion-panel>
+  </mat-accordion>
+
+  <!-- Template to display if there are no posts -->
+  <ng-template #noPosts>
+    <mat-card>
+      <p>No posts available.</p>
+    </mat-card>
+  </ng-template>
+</div>

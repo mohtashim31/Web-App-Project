@@ -1,0 +1,21 @@
+/* Updated sticky footer CSS */
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 60px; /* Adjust this height as needed */
+  background-color: rgba(44, 81, 217, 0.98);
+  color: white;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000; /* Ensures the footer stays on top of other content */
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+body {
+  margin: 0;
+  padding-bottom: 60px; /* Same as footer height to prevent content overlap */
+}
