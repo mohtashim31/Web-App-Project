@@ -46,7 +46,6 @@ export class PostService {
 
     this.http.post<{ success: boolean, postId: string }>('http://localhost:3000/api/posts', post)
       .subscribe((res) => {
-        console.log("ping");
         const postId = res.postId;
         post.id = postId;
         this.posts.push(post);

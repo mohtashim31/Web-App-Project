@@ -3,6 +3,7 @@ import bodyParser from 'body-parser';
 import mongoose from "mongoose";
 
 import postRoutes from './routes/post.js';
+import userRoutes from './routes/user.js';
 
 import Post from './model/post.js'
 
@@ -34,6 +35,8 @@ app.use((req, res, next) => {
 });
 
 app.use('/api/posts', postRoutes);
+app.use('/api/user', userRoutes);
+
 
 
 export default app;
